@@ -36,3 +36,19 @@
   (+ (* c 100) (* b 10) a))
 
 (pprint `(assert that (1 2 3) returns 321 -> ,(equal (convert3 1 2 3) 321)))
+
+;; ex 2.2.5
+;; f-one = n**2 + 10
+(defun f-one (n)
+  (+ (* n n) 10))
+(pprint `(assert that (f-one 3) returns 19 -> ,(equal (f-one 3) 19)))
+
+;; f-two = (1/2) * n**2 + 20
+(defun f-two (n)
+  (+ (* 1/2 (* n n)) 20))
+(pprint `(assert that (f-two 3) returns 49/2 -> ,(equal (f-two 3) 49/2)))
+
+;; f-three = (1/2) * n**2 + 20
+(defun f-three (n)
+  (- 2 (/ 1 n)))
+(pprint `(assert that (f-three 4) returns 7/4 -> ,(equal (f-three 4) 7/4)))

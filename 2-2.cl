@@ -29,3 +29,10 @@
   (* 1/2 h b))
 
 (pprint `(assert if base=4 and height=5 then area=10 -> ,(equal (triangle 4 5) 10)))
+
+;; ex2.2.4
+;; convert3 
+(defun convert3 (a b c)
+  (+ (* c 100) (* b 10) a))
+
+(pprint `(assert that (1 2 3) returns 321 -> ,(equal (convert3 1 2 3) 321)))
